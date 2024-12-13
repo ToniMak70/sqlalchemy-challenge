@@ -67,6 +67,7 @@ def precipitation():
     p_dict = dict(results)
 
     print(f"Results for Precipitation - {p_dict}")
+    print("Out of Precipitation section.")
     return jsonify(p_dict) 
 
 
@@ -125,9 +126,9 @@ def get_temps_start(start):
     temps = []
     for min_temp, avg_temp, max_temp in results:
         temps_dict = {}
-        temps_dict['Min Temp'] = min_temp
-        temps_dict['Avg Temp'] = avg_temp
-        temps_dict['Max Temp'] = max_temp
+        temps_dict['Minimum Temperature'] = min_temp
+        temps_dict['Average Temperature'] = avg_temp
+        temps_dict['Maximum Temperature'] = max_temp
         temps.append(temps_dict)
     return jsonify(temps)
 
@@ -142,9 +143,9 @@ def get_temps_start_end(start, end):
     temps = []
     for min_temp, avg_temp, max_temp in results:
         temps_dict = {}
-        temps_dict['Min Temp'] = min_temp
-        temps_dict['Avg Temp'] = avg_temp
-        temps_dict['Max Temp'] = max_temp
+        temps_dict['Minimum Temperature'] = min_temp
+        temps_dict['Average Temperature'] = avg_temp
+        temps_dict['Maximum Temperature'] = max_temp
         temps.append(temps_dict)
     return jsonify(temps)
 
